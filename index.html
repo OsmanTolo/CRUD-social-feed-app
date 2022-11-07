@@ -4,24 +4,122 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome kit code -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <title>Social Feed | CRUD App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="app">
-      <header class="greeting card">
-        <img
-          src="assets/image-jonathan.jpg"
-          alt="Image of the user"
-          class="profile-pic"
-        />
-        <input
-          type="text"
-          id="post-input"
-          class="post-field"
-          placeholder="What's on your mind?"
-        />
+      <header>
+        <form class="greeting card">
+          <img
+            src="assets/image-jonathan.jpg"
+            alt="Image of the user"
+            class="profile-pic"
+          />
+          <input
+            type="text"
+            id="post-input"
+            class="post-field"
+            placeholder="What's on your mind?"
+          />
+          <input type="submit" value="Post" />
+        </form>
       </header>
+      <h3>Your Posts</h3>
+      <section class="post-feed card">
+        <!-- Dummy previous posts -->
+        <div class="post-list" id="post-list">
+          <div class="post-details">
+            <img
+              src="assets/image-jonathan.jpg"
+              alt="Image of the user"
+              class="profile-pic"
+            />
+            <div class="post-time-details">
+              <h4>John Doe</h4>
+              <span class="time-posted">18:00 hr</span>
+              <span class="date-posted">Yesterday</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Temporibus animi officiis sint numquam doloribus, sed ea maxime
+              illo ab fugit inventore sunt labore itaque reprehenderit
+              consequatur atque unde repellat repudiandae?
+            </p>
+          </div>
+          <div class="post-actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="post-feed card">
+        <!-- Dummy previous posts -->
+        <div class="post-list" id="post-list">
+          <div class="post-details">
+            <img
+              src="assets/image-jonathan.jpg"
+              alt="Image of the user"
+              class="profile-pic"
+            />
+            <div class="post-time-details">
+              <h4>John Doe</h4>
+              <span class="time-posted">18:00 hr</span>
+              <span class="date-posted">Yesterday</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Temporibus animi officiis sint numquam doloribus, sed ea maxime
+              illo ab fugit inventore sunt labore itaque reprehenderit
+              consequatur atque unde repellat repudiandae?
+            </p>
+          </div>
+          <div class="post-actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dummy previous posts -->
+      <section class="post-feed card">
+        <div class="post-list" id="post-list">
+          <div class="post-details">
+            <img
+              src="assets/image-jonathan.jpg"
+              alt="Image of the user"
+              class="profile-pic"
+            />
+            <div class="post-time-details">
+              <h4>John Doe</h4>
+              <span class="time-posted">18:00 hr</span>
+              <span class="date-posted">Yesterday</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Temporibus animi officiis sint numquam doloribus, sed ea maxime
+              illo ab fugit inventore sunt labore itaque reprehenderit
+              consequatur atque unde repellat repudiandae?
+            </p>
+          </div>
+          <div class="post-actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="main.js"></script>
   </body>

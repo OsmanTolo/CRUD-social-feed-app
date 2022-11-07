@@ -1,7 +1,14 @@
 /* Resets */
 :root {
-  --primary: #fff;
-  --secondary: #f0f2f5;
+  --primary-clr: #fff;
+  --secondary-clr: #e4e6e9;
+  --dark-clr: #888;
+  --accent-clr: #1a6ed8;
+  --danger-clr: #ff5b57;
+
+  --secondary-fclr: #919395;
+
+  --bg-clr: #f0f2f5;
 
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -14,10 +21,9 @@
 }
 
 section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  /* margin-top: 2rem; */
+  margin-bottom: 1rem;
+  padding: 0.75rem;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -25,16 +31,139 @@ button {
   appearance: none;
   border: none;
   outline: none;
-  background: none;
+  /* background: none; */
   cursor: initial;
 }
 
 body {
-  background: var(--secondary);
+  background: var(--bg-clr);
+}
+
+h3 {
+  color: var(--dark-clr);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+h4 {
+  color: var(--grey);
+  font-style: 0.875rem;
+  font-weight: 500;
+  /* margin-bottom: 0.5rem; */
 }
 
 .app {
   max-width: 728px;
   margin: 0 auto;
   padding: 1.5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.card {
+  background: var(--primary-clr);
+  border-radius: 0.5rem;
+  padding: 0.75rem; /*12px*/
+  box-shadow: var(--shadow);
+}
+
+.greeting .profile-pic {
+  display: block;
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.greeting .post-field {
+  min-height: 40px;
+  min-width: 75%;
+  font-size: 1.125rem;
+  background-color: var(--secondary-clr);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.greeting input[type="submit"] {
+  min-width: 15%;
+  min-height: 40px;
+  background: var(--accent-clr);
+  color: var(--primary-clr);
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.greeting input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.post-feed .post-details {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+}
+
+.post-feed .profile-pic {
+  display: block;
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.post-feed .post-time-details span {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--dark-clr);
+}
+
+.post-feed .post-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.post-feed .post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 0.5px solid var(--secondary-fclr);
+  margin-top: 1.5rem;
+}
+
+.post-feed .post-actions button {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--secondary-fclr);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.post-feed .post-actions .edit,
+.post-feed .post-actions .delete {
+  margin: 0 auto;
+  background: none;
+}
+
+.post-feed .post-actions .edit:hover {
+  background: var(--accent-clr);
+  color: var(--primary-clr);
+}
+
+.post-feed .post-actions .delete:hover {
+  background: var(--danger-clr);
+  color: var(--primary-clr);
 }
