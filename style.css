@@ -1,7 +1,8 @@
 /* Resets */
 :root {
   --primary: #fff;
-  --secondary: #f0f2f5;
+  --secondary: #e4e6e9;
+  --bg-color: #f0f2f5;
 
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -25,16 +26,43 @@ button {
   appearance: none;
   border: none;
   outline: none;
-  background: none;
+  /* background: none; */
   cursor: initial;
 }
 
 body {
-  background: var(--secondary);
+  background: var(--bg-color);
 }
 
 .app {
   max-width: 728px;
   margin: 0 auto;
   padding: 1.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 2.5%;
+}
+
+.card {
+  background: var(--primary);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.greeting .profile-pic {
+  display: block;
+  width: 7.5%;
+  border-radius: 50%;
+}
+
+.greeting .post-field {
+  min-width: 90%;
+  font-size: 1.125rem;
+  background-color: var(--secondary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
 }
