@@ -4,6 +4,9 @@
   --secondary-clr: #e4e6e9;
   --dark-clr: #888;
   --accent-clr: #1a6ed8;
+  --danger-clr: #ff5b57;
+
+  --secondary-fclr: #919395;
 
   --bg-clr: #f0f2f5;
 
@@ -19,7 +22,7 @@
 
 section {
   /* margin-top: 2rem; */
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 0.75rem;
 }
 
@@ -121,4 +124,46 @@ form {
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--dark-clr);
+}
+
+.post-feed .post-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.post-feed .post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 0.5px solid var(--secondary-fclr);
+  margin-top: 1.5rem;
+}
+
+.post-feed .post-actions button {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--secondary-fclr);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.post-feed .post-actions .edit,
+.post-feed .post-actions .delete {
+  margin: 0 auto;
+  background: none;
+}
+
+.post-feed .post-actions .edit:hover {
+  background: var(--accent-clr);
+  color: var(--primary-clr);
+}
+
+.post-feed .post-actions .delete:hover {
+  background: var(--danger-clr);
+  color: var(--primary-clr);
 }
