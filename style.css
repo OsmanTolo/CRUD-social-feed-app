@@ -2,6 +2,7 @@
 :root {
   --primary-clr: #fff;
   --secondary-clr: #e4e6e9;
+  --dark-clr: #888;
   --accent-clr: #1a6ed8;
 
   --bg-clr: #f0f2f5;
@@ -17,10 +18,9 @@
 }
 
 section {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.75rem;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -34,6 +34,22 @@ button {
 
 body {
   background: var(--bg-clr);
+}
+
+h3 {
+  color: var(--dark-clr);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+h4 {
+  color: var(--grey);
+  font-style: 0.875rem;
+  font-weight: 500;
+  /* margin-bottom: 0.5rem; */
 }
 
 .app {
@@ -86,4 +102,23 @@ form {
 
 .greeting input[type="submit"]:hover {
   opacity: 0.75;
+}
+
+.post-feed .post-details {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+}
+
+.post-feed .profile-pic {
+  display: block;
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.post-feed .post-time-details span {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--dark-clr);
 }

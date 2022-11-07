@@ -9,20 +9,39 @@
   </head>
   <body>
     <main class="app">
-      <form class="greeting card">
-        <img
-          src="assets/image-jonathan.jpg"
-          alt="Image of the user"
-          class="profile-pic"
-        />
-        <input
-          type="text"
-          id="post-input"
-          class="post-field"
-          placeholder="What's on your mind?"
-        />
-        <input type="submit" value="Post" class="post-btn" />
-      </form>
+      <header>
+        <form class="greeting card">
+          <img
+            src="assets/image-jonathan.jpg"
+            alt="Image of the user"
+            class="profile-pic"
+          />
+          <input
+            type="text"
+            id="post-input"
+            class="post-field"
+            placeholder="What's on your mind?"
+          />
+          <input type="submit" value="Post" />
+        </form>
+      </header>
+      <h3>Your Posts</h3>
+      <section class="post-feed card">
+        <div class="post-list" id="post-list">
+          <div class="post-details">
+            <img
+              src="assets/image-jonathan.jpg"
+              alt="Image of the user"
+              class="profile-pic"
+            />
+            <div class="post-time-details">
+              <h4>John Doe</h4>
+              <span class="time-posted">18:00 hr</span>
+              <span class="date-posted">Yesterday</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="main.js"></script>
   </body>
