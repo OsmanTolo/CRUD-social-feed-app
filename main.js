@@ -29,7 +29,8 @@ const acceptPostData = () => {
 };
 
 const createPost = () => {
-  posts.innerHTML += `<section class="post-feed card">
+  posts.innerHTML += `
+  <section class="post-feed card">
   <div class="post-list">
     <div class="post-details">
       <img
@@ -57,4 +58,7 @@ const createPost = () => {
     </div>
   </div>
 </section>`;
+
+  newPostInput.value = "";
+  newPostInput.placeholder = "What's on your mind?";
 };
