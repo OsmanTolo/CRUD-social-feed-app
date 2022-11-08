@@ -54,11 +54,16 @@ const createPost = () => {
     </div>
     <div class="post-actions">
       <button class="edit">Edit</button>
-      <button class="delete">Delete</button>
+      <button onClick="deletePost(this)" class="delete">Delete</button>
     </div>
   </div>
 </section>`;
 
+  // Reset the form
   newPostInput.value = "";
   newPostInput.placeholder = "What's on your mind?";
+};
+
+const deletePost = (e) => {
+  e.parentElement.parentElement.parentElement.remove();
 };
