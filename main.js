@@ -1,6 +1,7 @@
 const form = document.querySelector("#new-post");
 const newPostInput = document.querySelector("#new-post-input");
-// const errorMsg = document.querySelector("error-msg");
+const posts = document.querySelector("#posts");
+// const postContent = document.querySelector()
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,12 +17,44 @@ const formValidation = () => {
     newPostInput.placeholder = "";
     newPostInput.classList.remove("error-msg");
     acceptPostData();
+    createPost();
   }
 };
 
 const postData = [];
 
 const acceptPostData = () => {
-  postData["post-text"] = newPostInput.value;
+  postData["content"] = newPostInput.value;
   console.log(postData);
+};
+
+const createPost = () => {
+  posts.innerHTML += `<section class="post-feed card">
+  <div class="post-list">
+    <div class="post-details">
+      <img
+        src="assets/image-jonathan.jpg"
+        alt="Image of the user"
+        class="profile-pic"
+      />
+      <div class="post-time-details">
+        <h4>John Doe</h4>
+        <span class="time-posted">18:00 hr</span>
+        <span class="date-posted">Yesterday</span>
+      </div>
+    </div>
+    <div class="post-content">
+      <input
+        type="text"
+        class="post-text"
+        value="${postData.content}"
+        readonly
+      />
+    </div>
+    <div class="post-actions">
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+    </div>
+  </div>
+</section>`;
 };
