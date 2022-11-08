@@ -15,7 +15,7 @@
   <body>
     <main class="app">
       <header>
-        <form class="greeting card">
+        <form id="new-post" class="greeting card">
           <img
             src="assets/image-jonathan.jpg"
             alt="Image of the user"
@@ -23,17 +23,17 @@
           />
           <input
             type="text"
-            id="post-input"
+            id="new-post-input"
             class="post-field"
             placeholder="What's on your mind?"
           />
-          <input type="submit" value="Post" />
+          <input type="submit" id="new-post-submit" value="Post" />
         </form>
       </header>
       <h3>Your Posts</h3>
       <section class="post-feed card">
         <!-- Dummy previous posts -->
-        <div class="post-list" id="post-list">
+        <div class="post-list" id="posts">
           <div class="post-details">
             <img
               src="assets/image-jonathan.jpg"
@@ -47,12 +47,12 @@
             </div>
           </div>
           <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Temporibus animi officiis sint numquam doloribus, sed ea maxime
-              illo ab fugit inventore sunt labore itaque reprehenderit
-              consequatur atque unde repellat repudiandae?
-            </p>
+            <input
+              type="text"
+              class="post-text"
+              value="All my post content goes here..."
+              readonly
+            />
           </div>
           <div class="post-actions">
             <button class="edit">Edit</button>
@@ -77,12 +77,12 @@
             </div>
           </div>
           <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Temporibus animi officiis sint numquam doloribus, sed ea maxime
-              illo ab fugit inventore sunt labore itaque reprehenderit
-              consequatur atque unde repellat repudiandae?
-            </p>
+            <input
+              type="text"
+              class="post-text"
+              value="All my post content goes here..."
+              readonly
+            />
           </div>
           <div class="post-actions">
             <button class="edit">Edit</button>
@@ -107,12 +107,12 @@
             </div>
           </div>
           <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Temporibus animi officiis sint numquam doloribus, sed ea maxime
-              illo ab fugit inventore sunt labore itaque reprehenderit
-              consequatur atque unde repellat repudiandae?
-            </p>
+            <input
+              type="text"
+              class="post-text"
+              value="All my post content goes here..."
+              readonly
+            />
           </div>
           <div class="post-actions">
             <button class="edit">Edit</button>

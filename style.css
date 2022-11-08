@@ -126,10 +126,11 @@ form {
   color: var(--dark-clr);
 }
 
-.post-feed .post-content {
+.post-feed .post-content input {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  width: 100%;
 }
 
 .post-feed .post-actions {
