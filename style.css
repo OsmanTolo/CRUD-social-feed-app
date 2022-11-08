@@ -126,7 +126,7 @@ form {
   color: var(--dark-clr);
 }
 
-.post-feed .post-content input {
+.post-feed .post-content {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;

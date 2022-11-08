@@ -21,43 +21,40 @@ const formValidation = () => {
   }
 };
 
-const postData = [];
+const postData = []; //Array to store the post objects from acceptPostData()
 
 const acceptPostData = () => {
-  postData["content"] = newPostInput.value;
+  // postData["content"] = newPostInput.value;
+  postData.push({
+    content: newPostInput.value,
+  });
   console.log(postData);
+  // Todo: add date to the object data
 };
 
 const createPost = () => {
   posts.innerHTML += `
   <section class="post-feed card">
-  <div class="post-list">
-    <div class="post-details">
-      <img
-        src="assets/image-jonathan.jpg"
-        alt="Image of the user"
-        class="profile-pic"
-      />
-      <div class="post-time-details">
-        <h4>John Doe</h4>
-        <span class="time-posted">18:00 hr</span>
-        <span class="date-posted">Yesterday</span>
+    <div class="post-list">
+      <div class="post-details">
+        <img
+          src="assets/image-jonathan.jpg"
+          alt="Image of the user"
+          class="profile-pic"
+        />
+        <div class="post-time-details">
+          <h4>John Doe</h4>
+          <span class="time-posted">18:00 hr</span>
+          <span class="date-posted">Yesterday</span>
+        </div>
+      </div>
+      <p class="post-content">${postData.content}</p>
+      <div class="post-actions">
+        <button onclick="editPost(this)" class="edit">Edit</button>
+        <button onClick="deletePost(this)" class="delete">Delete</button>
       </div>
     </div>
-    <div class="post-content">
-      <input
-        type="text"
-        class="post-text"
-        value="${postData.content}"
-        readonly
-      />
-    </div>
-    <div class="post-actions">
-      <button class="edit">Edit</button>
-      <button onClick="deletePost(this)" class="delete">Delete</button>
-    </div>
-  </div>
-</section>`;
+  </section>`;
 
   // Reset the form
   newPostInput.value = "";
@@ -65,5 +62,10 @@ const createPost = () => {
 };
 
 const deletePost = (e) => {
+  e.parentElement.parentElement.parentElement.remove();
+};
+
+const editPost = (e) => {
+  newPostInput.value = e.parentElement.previousElementSibling.innerHTML;
   e.parentElement.parentElement.parentElement.remove();
 };
