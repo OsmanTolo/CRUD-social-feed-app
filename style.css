@@ -168,3 +168,8 @@ form {
   background: var(--danger-clr);
   color: var(--primary-clr);
 }
+
+.error-msg::placeholder {
+  color: var(--danger-clr);
+  font-size: 1.125rem;
+}
