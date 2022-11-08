@@ -21,7 +21,7 @@
 }
 
 section {
-  /* margin-top: 2rem; */
+  margin-top: 2rem;
   margin-bottom: 1rem;
   padding: 0.75rem;
 }
@@ -126,7 +126,7 @@ form {
   color: var(--dark-clr);
 }
 
-.post-feed .post-content input {
+.post-feed .post-content {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
@@ -167,4 +167,9 @@ form {
 .post-feed .post-actions .delete:hover {
   background: var(--danger-clr);
   color: var(--primary-clr);
+}
+
+.error-msg::placeholder {
+  color: var(--danger-clr);
+  font-size: 1.125rem;
 }
